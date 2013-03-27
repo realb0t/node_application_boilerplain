@@ -1,0 +1,81 @@
+extends layout
+
+block title
+  title KeyWars: Escape
+
+block styles
+  link(rel='stylesheet', media="screen", href="/styles/common.css")
+
+block script
+  script
+    var SynergyConfig = { 
+      version: '0.0.1' ,
+      Config: {},
+      Env: {
+        apiClass: '',
+        id: 0,
+        type: 'vk',
+        prefix: '',
+        Vk: {},
+        Ok: { fapi_params: {} }
+      },
+      User: {
+        remember_token: '',
+        uid: 123,
+        attributes: {},
+        id: "123123",
+        real_balance: 0,
+        game_balance: 0,
+        haveReal: function(amount) { return 0 >= amount; },
+        haveGame: function(amount) { return 0 >= amount; },
+        model: {}
+      }
+    };
+
+    window.Request = {
+      params: {}
+    };
+
+    window.MathHack = {
+      round: function(somenum) {
+        return (0.5 + somenum) << 0;
+      }
+    };
+
+    window.History = {};
+
+    window.AccessLog = {
+      push: function(track) {
+        try {
+          _gaq.push(['_trackPageview', track + '']);
+          if (console && console.log) {
+            console.log('track: ' + track);
+          } 
+        } catch(e) { }
+      },
+
+      pushWithEnv: function(track) {
+        this.push(SynergyConfig.Env.prefix + '/' + track + '');
+      }
+    };
+
+block scripts
+  script(src="/javascript/sock.js")
+  script(src="/javascript/require.js")
+  script(src="/javascript/apis/vk.js")
+  script(src="/scripts/main.js")
+
+block
+  #preloader
+    .process Loading ...
+  #warnings
+  header
+    .title
+      .logo Logo
+      //.user #{current_user.name}
+      .balance
+    nav.top.nav
+  article
+  section.popups
+  section.windows
+  footer

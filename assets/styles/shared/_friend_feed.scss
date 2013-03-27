@@ -1,0 +1,244 @@
+$nav_button-margin-top: 20px;
+$nav_button-margin-left-right-margin: -5px;
+$nav_button-width: 20px;
+$nav_button-height: 20px;
+$nav_button-background: #00f;
+
+$nav_mass_button-margin-top: 60px;
+$nav_mass_button-margin-left-right-margin: -5px;
+$nav_mass_button-width: 20px;
+$nav_mass_button-height: 20px;
+$nav_mass_button-background: #0ff;
+
+$feed-height: 120px;
+$feed-width: 570px;
+$feed-margin: 10px 20px 0 20px;
+$feed-z-index: 500;
+$feed-border: 0px;
+
+$tool_tip-z-index: $feed-z-index + 100;
+
+$container-margin: 20px;
+$container-height: 100px;
+$container-width: 525px;
+$container-background: transparent;
+$container-padding: 0px;
+$container-border: 0px;
+
+$plate-height: 100px;
+$plate-left: 0px;
+$plate-right: 0px;
+$plate-border: 0px;
+$plate-margin: 0px;
+$plate-padding: 0px;
+
+$friend_block-margin: 0px 0px 0px 5px - 4px;
+$friend_block-width: 70px;
+$friend_block-height: 100px - 4px;
+$friend_block-background: #0F0;
+$friend_block-padding: 0px;
+$friend_block-border-color: $dark-blue;
+$friend_block-background: $light-blue;
+$friend_block-border: 2px solid $friend_block-border-color;
+
+$card-height: 90px;
+$card-padding: 5px 0px 0px 0px;
+$card-margin: 0px;
+
+$avatar-margin: 5px 0 0 0;
+
+$name-margin: 0px;
+$name-size: 12px;
+
+
+
+$tool_tip-width: $friend_block-width;
+$tool_tip-height: 100px;
+$tool_tip-position: -$tool_tip-height;
+$tool_tip-background: #FF0;
+
+$tool_tip_action-height: 30px;
+$tool_tip_action-margin: 5px;
+$tool_tip_action-width: $tool_tip-width - 5px * 2;
+
+$tool_tip_profile-background: #00f;
+$tool_tip_gift-background: #00f;
+
+$contents-margin: 3px;
+$contents-width: 30px;
+$contents-height: $contents-width;
+$contents_rating-background: #00f;
+$contents_resource-background: $contents_rating-background;
+$contents_invite-padding: 5px;
+$contents_invite-size: $name-size;
+$contents_invite-background: #f00;
+
+.box {
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #0ff;
+  .block {
+    position: relative;
+    bottom: 50px;
+    width: 200px;
+    height: 200px;
+    background: #ff0;
+  }
+}
+
+footer {
+  #friend_feed {
+    position: relative;
+    height: $feed-height;
+    width: $feed-width;
+    margin: $feed-margin;
+    z-index: $feed-z-index;
+    border: $feed-border;
+    overflow-y: visible;
+
+    .nav {
+  
+      background: $nav_button-background;
+      top: $nav_button-margin-top;
+      width: $nav_button-width;
+      height: $nav_button-height;
+      position: absolute;
+      cursor: pointer;
+
+      &.left {
+        left: $nav_button-margin-left-right-margin;
+      }
+
+      &.right {
+        right: $nav_button-margin-left-right-margin;
+      }
+
+    }
+
+    .nav_mass {
+
+      background: $nav_mass_button-background;
+      top: $nav_mass_button-margin-top;
+      width: $nav_mass_button-width;
+      height: $nav_mass_button-height;
+      position: absolute;
+      cursor: pointer;
+
+      &.left {
+        left: $nav_mass_button-margin-left-right-margin;
+      }
+
+      &.right {
+        right: $nav_mass_button-margin-left-right-margin;
+      }
+    }
+
+    .container {
+      margin: $container-margin;
+      overflow-x: hidden;
+      overflow-y: visible;
+      position: relative;
+      padding: $container-padding;
+      height: $container-height;
+      background: $container-background;
+      border: $container-border;
+      width: $container-width;
+      .plate {
+        height: $plate-height;
+        position: absolute;
+        left: $plate-left;
+        right: $plate-right;
+        border: $plate-border;
+        margin: $plate-margin;
+        padding: $plate-padding;
+        overflow-y: visible;
+        .friend_block {
+          border-radius: 5px;
+          background: $friend_block-background;
+          margin: $friend_block-margin;
+          float: left;
+          width: $friend_block-width;
+          height: $friend_block-height;
+          padding: $friend_block-padding;
+          border: $friend_block-border;
+          position: relative;
+          overflow-x: hidden;
+          overflow-y: visible;
+          .card {
+            cursor: pointer;
+            height: $card-height;
+            padding: $card-padding;
+            margin: $card-margin;
+            .avatar {
+              margin: $avatar-margin;
+              text-align: center;
+            }
+            .resource, .rating {
+              position: absolute;
+              bottom: $contents-margin;
+            }
+            .rating {
+              left: $contents-margin;
+              width: $contents-width;
+              height: $contents-height;
+              background: $contents_rating-background;
+            }
+            .resource {
+              right: $contents-margin;
+              width: $contents-width;
+              height: $contents-height;
+              background: $contents_resource-background;
+            }
+            .invite {
+              padding: $contents_invite-padding;
+              position: absolute;
+              bottom: $contents-margin;
+              font-size: $contents_invite-size;
+              left: $contents-margin;
+              right: $contents-margin;
+              background: $contents_invite-background;
+              text-align: center;
+            }
+            .name {
+              max-width: $friend_block-width;
+              margin: $name-margin;
+              text-align: center;
+              font-size: $name-size;
+              position: relative;
+            }
+          }
+          .position {
+            position: absolute;
+            top: $tool_tip-position;
+            .tool_tip {
+              position: fixed;
+              z-index: $tool_tip-z-index;
+              width: $tool_tip-width;
+              height: $tool_tip-height;
+              background: $tool_tip-background;
+              display: none;
+              .actions {
+                position: relative;
+                .action {
+                  height: $tool_tip_action-height;
+                  width: $tool_tip_action-width;
+                  margin: $tool_tip_action-margin;
+                  cursor: pointer;
+                  &.profile {
+                    background: $tool_tip_profile-background;
+                  }
+                  &.gift {
+                    background: $tool_tip_gift-background;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

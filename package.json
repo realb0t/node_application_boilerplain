@@ -1,0 +1,34 @@
+{
+  "name": "KeyWards",
+  "version": "0.0.1-unreleasable",
+  "dependencies": {
+    "express": "2.5.8",
+    "sockjs": "0.3.1",
+    "jade": "0.26.3",
+    "coffee-script": "1.1.2",
+    "underscore": "1.3.3",
+    "mongoose": "2.7.1",
+    "less": "1.3.0",
+    "nib": "0.6.0",
+    "stylus": "0.28.1",
+    "tracer": "0.5.1",
+    "supervisor": "0.4.1",
+    "amdefine": ">=0.0.2",
+    "requirejs": "2.0.4",
+    "nconf": "0.6.4",
+    "noflo": "0.1.3",
+    "amqp": "0.1.3",
+    "peer": "0.1.4",
+    "sass": "*"
+  }, 
+  "devDependancies": {
+    "chai": "*",
+    "mocha": "*",
+    "sinon": "*",
+    "sinon-chai": "*"
+  },
+  "scripts": {
+    "start": "foreman start",
+    "test": "mocha --require should --compilers coffee:coffee-script --colors"
+  }
+}

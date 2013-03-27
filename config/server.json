@@ -1,0 +1,63 @@
+{
+  "requirejs": {
+    "paths": {
+      "cs": "cs",
+      "ServerBinding": "backend",
+      "RequestDispatcher": "backend/request_dispatcher",
+      "Synergy": "backend/synergy",
+      "Wrapper": "backend/synergy/wrapper",
+      "WrapperBase": "backend/synergy/wrapper/base",
+      "WrapperOk": "backend/synergy/wrapper/ok",
+      "WrapperVk": "backend/synergy/wrapper/vk",
+      "ModelHelper": "backend/models/helper",
+      "UserModel": "backend/models/user",
+      "PrototypeModel": "backend/models/prototype",
+      "GiftModel": "backend/models/gift",
+      "ItemModel": "backend/models/item"
+    },
+    "test_paths": [
+      "cs!test/enviropment/common",
+      "cs!test/enviropment/amqp",
+      "cs!test/models/user",
+      "cs!test/models/prototype",
+      "cs!test/models/gift",
+      "cs!test/models/item"
+    ]
+  },
+  "synergy": {
+    "ok": {
+      "development": {
+        "api_server": "",
+        "application_key": "",
+        "secret_key": ""
+      },
+      "staging": {
+        "api_server": "",
+        "application_key": "",
+        "secret_key": ""
+      },
+      "production": {
+        "api_server": "",
+        "application_key": "",
+        "secret_key": ""
+      }
+    },
+    "vk": {
+      "production": {
+        "api_server": "",
+        "key": "",
+        "app_id": 999999999
+      },
+      "staging": {
+        "api_server": "",
+        "key": "",
+        "app_id": 999999999
+      },
+      "development": {
+        "api_server": "",
+        "key": "",
+        "app_id": 999999999
+      }
+    }
+  }
+}
