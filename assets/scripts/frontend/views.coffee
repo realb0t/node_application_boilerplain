@@ -5,7 +5,10 @@ define [
   'FrontendViewsUnsupportPage'
   'FrontendViewsMainPage'
   'FrontendViewsHelpPage'
-], ($, _, Backbone, UnsupportPage, MainPage, HelpPage) ->
+  'FrontendViewsChatPage'
+  'FrontendViewsChannelsPage'
+  'FrontendViewsDemoPage'
+], ($, _, Backbone, UnsupportPage, MainPage, HelpPage, ChatPage, ChannelsPage, DemoPage) ->
 
 
   class Application extends Backbone.View
@@ -41,4 +44,7 @@ define [
     MainPage: MainPage
     HelpPage: HelpPage
     UnsupportPage: UnsupportPage
+    ChatPage: ChatPage
+    ChannelsPage: ChannelsPage
+    DemoPage: DemoPage
   }

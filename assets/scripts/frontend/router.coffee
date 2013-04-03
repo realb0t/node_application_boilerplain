@@ -20,8 +20,11 @@ define [
   class Router.Support extends Backbone.Router
 
     routes:
-      'main': 'showMain'  # Главная страница
-      'help': 'showHelp' # Страница помощи
+      'main':     'showMain'     # Главная страница
+      'help':     'showHelp'     # Страница помощи
+      'chat':     'showChat'     # Страница тестирования PeerJS
+      'demo':     'showDemo'     # Страница тестирования 2D Canvas
+      'channels': 'showChannels' # Страница проверки PeerJS with SockJS
       '*actions': 'showMain'
 
     preReset: ->
@@ -33,7 +36,10 @@ define [
       @page = new Views[klass + 'Page'](options) 
       $('article').html(@page.render().el)
 
-    showMain: -> @pageWithLog('Main')
-    showHelp: -> @pageWithLog('Help')
+    showMain:     -> @pageWithLog('Main')
+    showHelp:     -> @pageWithLog('Help')
+    showChat:     -> @pageWithLog('Chat')
+    showDemo:     -> @pageWithLog('Demo')
+    showChannels: -> @pageWithLog('Channels')
 
   return Router

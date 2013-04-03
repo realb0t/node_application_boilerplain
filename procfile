@@ -1,1 +1,2 @@
 web: coffee --nodejs --debug server.coffee
+worker: coffee --nodejs --debug peer.coffee

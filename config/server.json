@@ -1,4 +1,8 @@
 {
+  "peer": {
+    "port": 9000,
+    "host": "localhost"
+  },
   "requirejs": {
     "paths": {
       "cs": "cs",

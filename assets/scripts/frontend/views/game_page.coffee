@@ -3,15 +3,15 @@ define [
   'underscore'
   'backbone'
   'FrontendViewsBaseHtmlPage'
-  'text!static_tmp/pages/help.html'
+  'text!static_tmp/pages/game.html'
 ], ($, _, Backbone, BaseHtmlPage, pageTemplate) ->
 
-  class HelpPage extends BaseHtmlPage
-    id: 'help_page'
+  class GamePage extends BaseHtmlPage
+    id: 'game_page'
 
     render: ->
       $(@el).html(pageTemplate)
       @deferredRender () -> Synergy.current.screenInit(null, 1000)
       return @
 
-  return HelpPage
+  return GamePage

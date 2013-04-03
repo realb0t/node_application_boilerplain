@@ -1,0 +1,10 @@
+#chat_page {
+  width: 700px;
+  height: 700px;
+  background: #F00;
+  .chat {
+    .empty {
+      display: none;
+    }
+  }
+}

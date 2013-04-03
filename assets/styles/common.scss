@@ -68,17 +68,22 @@ section.canvas {
   }
 }
 
+@import "pages/chat";
 @import "pages/main";
 @import "pages/help";
-@import "pages/crafts";
-@import "pages/dashboard";
-@import "pages/hangar";
-@import "pages/powerup";
-@import "pages/rating";
-@import "pages/profile";
 @import "pages/unsupport";
-@import "pages/galaxy_page";
-@import "shared/friend_feed";
+
+#chat_page {
+  width: 700px;
+  height: 700px;
+  background: #F00;
+  .chat {
+    .empty {
+      display: none;
+    }
+  }
+}
+
 
 section.page {
   position: relative;

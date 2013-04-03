@@ -1,0 +1,23 @@
+<h1>PeerJS chat example</h1>
+
+<div class="info">
+  You pid is: <span id="pid"></span>
+  You status is: <span id="status"></span>
+<div>
+
+<div class="connection">
+  <input name="pid" type="text" id="other_pid" value="" />
+  <input type="button" value="Connect" name="connect" id="connect" >
+</div>
+
+<div class="message">
+  <input name="message" type="text" id="message" value="" />
+  <input type="button" value="Send" name="send" id="send" >
+</div>
+
+<div class="chat">
+  <div class="empty message_box" style="display: none">
+    <span class="from"></span>: 
+    <span class="message"></span>
+  </div>
+</div>

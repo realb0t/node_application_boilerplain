@@ -8,6 +8,10 @@ define (require) ->
 
   RequestDispatcher = require 'cs!RequestDispatcher'
 
+  # Config SockJS
+  sockjs_opts = sockjs_url: "http://cdn.sockjs.org/sockjs-0.3.min.js"
+  socket = sockjs.createServer sockjs_opts
+
   # Config Express
   app = express.createServer()
   app.configure () ->
@@ -35,19 +39,6 @@ define (require) ->
     scss = fs.readFileSync full_path, "ascii"
     css = sass.render scss 
     res.send css
-
-  ###
-  app.get /^\/((?:[^\/]+\/?)+)\/(.*?).css/, (req, res) ->
-    console.log req.params[0], req.params[1]
-    res.header 'Content-Type', 'application/x-javascript'
-    cs = fs.readFileSync "#{__app_root}/assets/#{req.params[0]}/#{req.params[1]}.coffee", "ascii"
-    js = less.compile cs 
-    res.send js
-  ###
-
-  # Config SockJS
-  sockjs_opts = sockjs_url: "http://cdn.sockjs.org/sockjs-0.3.min.js"
-  socket = sockjs.createServer sockjs_opts
 
   return {
     produceDispatcher: (params) ->

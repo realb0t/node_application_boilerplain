@@ -36,7 +36,9 @@ define (require) ->
         
         conn.on 'data', (message) => 
           logger.info "Message: " + message
-          conn.write message + " " + Synergy.Backend.currentSocialType
+          conn.write "pong" if message == 'ping'
+
+        conn.write 'welcome'
 
       @socket.installHandlers @app, prefix: '/echo'
       

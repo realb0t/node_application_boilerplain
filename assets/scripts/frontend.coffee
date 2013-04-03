@@ -6,7 +6,8 @@ define [
   'FrontendViews'
   'Detector'
   'Synergy'
-], ($, _, Backbone, Routers, Views, Detector, Synergy) ->
+  'Channel'
+], ($, _, Backbone, Routers, Views, Detector, Synergy, Channel) ->
 
   root = @
   root.socContext = {}
